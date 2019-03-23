@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <base target="_top">
+    <title>KU1025</title>
+    <?!= include('css'); ?>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+<?var rootFolderId = p;?>
+<?var url = ScriptApp.getService().getUrl();?>
+<?var parentFolderProperty = parentFolder(rootFolderId);?>
+
+<body>
+    <div class="body">
+        <div>
+            <div style="height:10px;background-color:#228b22">
+            </div>
+            <div style="height:3px;background-color:#ffffff">
+            </div>
+            <div style="height:3px;background-color:#228b22">
+            </div>
+            <div style="height:20px;background-color:#ffffff">
+            </div>
+        </div>
+        <header>
+            <a id="title" href="<?!=url?>">KU1025<font size=+1>β</font></a><a
+                href="http://1025-kuexam.bitballoon.com/upload.html">
+                <font color="red">試験問題募集中</font>
+            </a>
+        </header>
+        <div>
+            <div style="height:20px;background-color:#ffffff">
+            </div>
+            <div style="height:40px;background-color:#31cc31">
+            </div>
+        </div>
+        <p class="description">
+            このサイトは，京都大学工学部物理工学科の過去問サイトです．<br>
+            過去問の投稿は<a href="http://1025-kuexam.bitballoon.com/upload.html">こちら</a>から，ご意見などは 1025.kuexam[at]gmail.com
+            に送ってください．([at]は@に変更してください)
+            <script src="https://kampa.me/t/pha.js"></script>
+        </p>
+        <div class="container">
+            <div class="side">
+
+            </div>
+            <div class="contents">
+                <a href="<?!=url?>?id=<?!=parentFolderProperty.id?>">
+                    <?!=parentFolderProperty.name?>に戻る</a>
+                <ul>
+                    <?!=getContents(rootFolderId)//生成済みのリストを取得?>
+                    <?!=//makeContents(rootFolderId)//アクセスがあるたびにdriveからリストを生成?>
+                </ul>
+                <a href="https://drive.google.com/drive/folders/<?!=rootFolderId?>">このフォルダを開く</a>
+            </div>
+            <a class="twitter-timeline" width="350px" height="500px"
+                href="https://twitter.com/1025kuexam?ref_src=twsrc%5Etfw">Tweets by 1025kuexam</a>
+        </div>
+        <aside>
+            <a href="https://drive.google.com/open?id=1WqzTyHXuvA50DrXTc8KZyGKvY_EfxGCGzsJhr7bJk5d6WWQW-tnnJhhB"
+                target="_blank">
+                <font color=#228b22>Google Apps Script of KU1025β</font>
+            </a>
+        </aside>
+        <div>
+            <div style="height:3px;background-color:#228b22">
+            </div>
+            <div style="height:3px;background-color:#ffffff">
+            </div>
+            <div style="height:10px;background-color:#228b22">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

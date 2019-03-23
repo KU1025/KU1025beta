@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <base target="_top">
+    <title>KU1025β</title>
+    <?!= include('css'); ?>
+</head>
+
+<body>
+    <?var url = ScriptApp.getService().getUrl();?>
+    <div class="body">
+        <div>
+            <div style="height:10px;background-color:#228b22">
+            </div>
+            <div style="height:3px;background-color:#ffffff">
+            </div>
+            <div style="height:3px;background-color:#228b22">
+            </div>
+            <div style="height:20px;background-color:#ffffff">
+            </div>
+        </div>
+        <header>
+            <a id="title" href='<?!=url?>'>KU1025<font size=+1>β</font></a><a
+                href="http://1025-kuexam.netlify.com/upload.html">
+                <font color="red">試験問題募集中</font>
+            </a>
+        </header>
+        <div>
+            <div style="height:20px;background-color:#ffffff">
+            </div>
+            <div style="height:40px;background-color:#31cc31">
+            </div>
+        </div>
+        <p class="description">
+            このサイトは，京都大学工学部物理工学科の過去問サイトです．<br>
+            過去問の投稿は<a href="http://1025-kuexam.netlify.com/upload.html">こちら</a>から，ご意見などは 1025.kuexam[at]gmail.com
+            に送ってください．([at]は@に変更してください)
+            <script src="https://kampa.me/t/pha.js"></script>
+        </p>
+        <div class="container">
+            <div class="side">
+
+            </div>
+            <div class="contents">
+                過去問
+                <ul>
+                    <?
+          var rootFolderId = p;
+          output.append(makeContents(rootFolderId, url));
+        ?>
+                </ul>
+
+                関連リンク
+                <ul>
+                    <li>
+                        <a href="http://1025-kuexam.netlify.com" target=”_blank”>
+                            KU1025
+                        </a>
+                        KU1025旧サイト βが重い場合はこちらへ
+                    </li>
+                    <li>
+                        <a href="http://kuee13.netlify.com" target=”_blank”>
+                            KUEE13
+                        </a>
+                        電気電子工学科過去問サイト
+                    </li>
+                    <li>
+                        <a href="https://www.wicurio.com/siketai" target=”_blank”>
+                            しけたい
+                        </a>
+                        京大生向け情報サイト（理学部）
+                    </li>
+                    <li>
+                        <a href="http://bukkoukakomon.web.fc2.com/" target=”_blank”>
+                            京大物理工学科過去問置き場
+                        </a>
+                        07年までの過去問サイト（こうならないように引き継いでくれる人募集中）
+                    </li>
+                </ul>
+
+                <br>
+                <font size="-1">更新履歴
+                    <ul style="list-style: none;">
+                        <li>
+                            2019/02/01 ファビコンを設定
+                        </li>
+                        <li>
+                            2019/01/30 tweetボタン設置，ファイル名でソートして表示など
+                        </li>
+                        <li>
+                            2019/01/06 <a style="text-decoration:none"
+                                href=https://script.google.com/macros/s/AKfycbymxEOt8hV8TGgdIz8tTfSSO4ULHKS_FmNCJAgKVFfP5HbJq04/exec>研究室アンケート結果
+                                </a>公開 </li> <li>
+                                2018/08/19 KU1025β公開
+                        </li>
+                        <li>
+                            2018/07/27 <a style="text-decoration:none"
+                                href=http://1025-kuexam.netlify.com/upload.html>過去問アップロードフォーム </a>作成 </li> <li>
+                                2018/07/11 トップページに関連リンクを追加
+                        </li>
+                        <li>
+                            2018/07/09 背景色を変更(青→緑)
+                        </li>
+                        <li>
+                            2018/07/05 Twitterを埋め込み
+                        </li>
+                        <li>
+                            2018/07/04 KU1025公開
+                        </li>
+                    </ul>
+                </font>
+                <script src="https://kampa.me/t/parts/pha.js"></script>
+            </div>
+            <a class="twitter-timeline" width="350px" height="500px"
+                href="https://twitter.com/1025kuexam?ref_src=twsrc%5Etfw">Tweets by 1025kuexam</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+        <aside>
+            <a href="https://drive.google.com/open?id=1WqzTyHXuvA50DrXTc8KZyGKvY_EfxGCGzsJhr7bJk5d6WWQW-tnnJhhB"
+                target="_blank">
+                <font color=#228b22>Google Apps Script of KU1025β</font>
+            </a>
+        </aside>
+        <div>
+            <div style="height:3px;background-color:#228b22">
+            </div>
+            <div style="height:3px;background-color:#ffffff">
+            </div>
+            <div style="height:10px;background-color:#228b22">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
